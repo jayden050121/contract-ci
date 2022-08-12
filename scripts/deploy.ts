@@ -1,4 +1,5 @@
 import { ethers } from "hardhat";
+import { writeFileSync } from "fs";
 
 async function main() {
   const currentTimestampInSeconds = Math.round(Date.now() / 1000);
@@ -13,6 +14,9 @@ async function main() {
   await lock.deployed();
 
   console.log("Lock with 1 ETH deployed to:", lock.address);
+
+  const content = JSON.stringify({ lock: lock.address });
+  writeFileSync("deployed/contracts.json", content);
 }
 
 // We recommend this pattern to be able to use async/await everywhere
