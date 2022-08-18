@@ -2,4 +2,4 @@
 
 This project demonstrates a basic Contract CI use case.
 
-Try running workflow manually:
+Try running workflow manually: 
