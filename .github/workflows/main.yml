@@ -36,3 +36,4 @@ jobs:
           registry: https://npm.pkg.github.com
           package: deployed/package.json
           check-version: false
+          greater-version-only: false
